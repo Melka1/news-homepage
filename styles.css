@@ -42,6 +42,9 @@ ul li a {
   font-weight: 500;
   margin-left: 20px;
 }
+ul li a:hover {
+  color: hsl(5deg, 85%, 63%);
+}
 
 main {
   display: grid;
@@ -63,6 +66,7 @@ main .web3 {
 main .web3 h1 {
   font-size: 3rem;
   line-height: 3rem;
+  color: hsl(240deg, 100%, 5%);
 }
 main .desc {
   grid-column: 2/3;
@@ -76,6 +80,13 @@ main .desc button {
   background-color: hsl(5deg, 85%, 63%);
   color: hsl(36deg, 100%, 99%);
   border: none;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+main .desc button:hover {
+  cursor: pointer;
+  background-color: hsl(240deg, 100%, 5%);
+  color: hsl(36deg, 100%, 99%);
 }
 main .desc p {
   font-size: 0.8rem;
@@ -96,6 +107,10 @@ main .news h1 {
 main .news .title {
   font-size: 1rem;
   padding-bottom: 10px;
+}
+main .news .title:hover {
+  color: hsl(35deg, 77%, 62%);
+  cursor: pointer;
 }
 main .news p {
   font-size: 0.8rem;
@@ -123,6 +138,11 @@ main .news hr {
 }
 .ads .ad--desc h4 {
   padding: 10px 0;
+  color: hsl(240deg, 100%, 5%);
+}
+.ads .ad--desc h4:hover {
+  color: hsl(5deg, 85%, 63%);
+  cursor: pointer;
 }
 .ads .ad--desc p {
   font-size: 0.8rem;
