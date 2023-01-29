@@ -22,6 +22,7 @@ nav, main, footer {
 }
 
 nav {
+  z-index: 2;
   display: flex;
   flex-direction: center;
   justify-content: space-between;
@@ -30,6 +31,15 @@ nav {
 }
 nav img {
   width: 50px;
+}
+nav .menu--icon, nav .menu--close {
+  display: none;
+}
+nav .menu--icon:hover, nav .menu--close:hover {
+  cursor: pointer;
+}
+nav .menus {
+  transition: all 0.5s ease-in-out;
 }
 
 ul li {
@@ -152,4 +162,54 @@ main .news hr {
 
 footer {
   margin-top: 20px;
+}
+
+.cover {
+  background-color: hsl(236deg, 13%, 42%);
+  opacity: 0.6;
+  z-index: 1;
+  width: 100vw;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  display: none;
+}
+
+@media screen and (width <= 375px) {
+  body {
+    padding: 18px;
+  }
+  nav, main, footer {
+    width: 100%;
+  }
+  main {
+    grid-template-columns: 1fr;
+    grid-auto-rows: -webkit-max-content;
+    grid-auto-rows: max-content;
+  }
+  main .image, main .web3, main .news, main .desc, main .ads {
+    grid-column: unset;
+    grid-row: unset;
+  }
+  main .desc {
+    gap: 20px;
+  }
+  main .desc p {
+    font-size: 0.9rem;
+  }
+  main .web3 h1 {
+    font-size: 2.7rem;
+  }
+  main .news {
+    margin: 40px 0;
+  }
+  main .news p {
+    font-size: 0.9rem;
+  }
+  nav .menu--list {
+    display: none;
+  }
+  nav .menu--icon {
+    display: block;
+  }
 }/*# sourceMappingURL=styles.css.map */

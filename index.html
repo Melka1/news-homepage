@@ -13,15 +13,20 @@
   </style>
 </head>
 <body>
+  <div class="cover" ></div>
   <Nav>
     <img src="./assets/images/logo.svg" alt="logo">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">New</a></li>
-      <li><a href="#">Popular</a></li>
-      <li><a href="#">Trending</a></li>
-      <li><a href="#">Categories</a></li>
-    </ul>
+    <div class="menus">
+      <img src="./assets/images/icon-menu.svg" alt="menu" class="menu--icon" onclick="handleNav()">
+      <img src="./assets/images/icon-menu-close.svg" alt="menu" class="menu--close" onclick="closeNav()">
+      <ul class="menu--list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Categories</a></li>
+      </ul>
+    </div>
   </Nav>
   <main>
     <div class="image"></div>

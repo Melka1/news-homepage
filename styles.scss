@@ -25,9 +25,11 @@ body {
 }
 nav, main, footer {
     width: 900px;
+    // z-index: 1;
 }
 
 nav {
+    z-index: 2;
     display: flex;
     flex-direction: center;
     justify-content: space-between;
@@ -35,6 +37,15 @@ nav {
     align-items: center;
     img {
         width: 50px;
+    }
+    .menu--icon, .menu--close {
+        display: none;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .menus {
+        transition: all 0.5s ease-in-out;
     }
 }
 ul li {
@@ -158,4 +169,57 @@ main {
 
 footer {
     margin-top: 20px;
+}
+
+.cover {
+    background-color: $Dark-grayish-blue;
+    opacity: 0.6;
+    z-index: 1;
+    width: 100vw;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    display: none;
+}
+
+@media screen and (width<=375px) {
+    body {
+        padding: 18px;
+    }
+    nav, main, footer {
+        width: 100%;
+    }
+    main {
+        grid-template-columns: 1fr;
+        grid-auto-rows: max-content;
+        .image, .web3, .news, .desc, .ads {
+            grid-column: unset;
+            grid-row: unset;
+        }
+        .desc {
+            gap: 20px;
+            p {
+                font-size: 0.9rem;
+            }
+        }
+        .web3 {
+            h1 {
+                font-size: 2.7rem;
+            }
+        }
+        .news {
+            margin: 40px 0;
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+    nav {
+        .menu--list {
+            display: none;
+        }
+        .menu--icon {
+            display: block;
+        }
+    }
 }
