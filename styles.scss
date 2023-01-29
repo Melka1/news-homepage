@@ -24,7 +24,7 @@ body {
     padding: 50px;
 }
 nav, main, footer {
-    width: 900px;
+    max-width: 900px;
     // z-index: 1;
 }
 
@@ -35,6 +35,7 @@ nav {
     justify-content: space-between;
     padding: 20px 10px;
     align-items: center;
+    width: 100%;
     img {
         width: 50px;
     }

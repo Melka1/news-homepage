@@ -18,7 +18,7 @@ body {
 }
 
 nav, main, footer {
-  width: 900px;
+  max-width: 900px;
 }
 
 nav {
@@ -28,6 +28,7 @@ nav {
   justify-content: space-between;
   padding: 20px 10px;
   align-items: center;
+  width: 100%;
 }
 nav img {
   width: 50px;
